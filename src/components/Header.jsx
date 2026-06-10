@@ -14,7 +14,6 @@ function Header({ totalPrice, favoriteCount, onCartClick, onFavClick, isDarkMode
         : "bg-white border-[#F3F3F3] text-black"
     }`}>
 
-      {/* ЛЕВАЯ СТОРОНА: Логотип и название (остаются всегда на месте) */}
       <div className="flex items-center gap-3 md:gap-4">
         <img
           src={logo}    
@@ -31,10 +30,8 @@ function Header({ totalPrice, favoriteCount, onCartClick, onFavClick, isDarkMode
         </div>
       </div>
 
-      {/* ПРАВАЯ СТОРОНА: Один общий контейнер для всех элементов управления */}
       <div className="flex items-center gap-4 md:gap-8">
         
-        {/* Кнопки навигации ПК (скрываются на мобилках через hidden md:flex) */}
         <div className={`hidden md:flex items-center gap-8 ${
           isDarkMode ? "text-gray-300" : "text-gray-500"
         }`}>
@@ -62,7 +59,6 @@ function Header({ totalPrice, favoriteCount, onCartClick, onFavClick, isDarkMode
           </div>
         </div>
 
-        {/* Переключатель темы (видимый ВСЕГДА: и на ПК, и на мобилке рядом с бургером) */}
         <button
           type="button"
           onClick={onThemeClick}
@@ -73,7 +69,6 @@ function Header({ totalPrice, favoriteCount, onCartClick, onFavClick, isDarkMode
           {isDarkMode ? <FiSun size={24} /> : <FiMoon size={24} />}
         </button>
 
-        {/* Иконка Бургер-меню (показывается ТОЛЬКО на мобилках рядом с темой) */}
         <button
           type="button"
           onClick={() => setIsMenuOpen(true)}
@@ -87,7 +82,6 @@ function Header({ totalPrice, favoriteCount, onCartClick, onFavClick, isDarkMode
       </div>
       
 
-      {/* ВЫЕЗЖАЮЩЕЕ БОКОВОЕ МЕНЮ ДЛЯ МОБИЛОК */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[1100] flex justify-end bg-black/50">
           <div className="absolute inset-0 cursor-pointer" onClick={() => setIsMenuOpen(false)}></div>

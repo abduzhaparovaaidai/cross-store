@@ -62,7 +62,6 @@ function Favourites(props) {
                               {item.title}
                             </p>
         
-                            {/* Блок с ценой и маленьким статичным сердечком */}
                             <div className="flex items-center gap-2 mt-2">
                               <p className="text-[14px] font-bold">
                                 {item.price} сом
@@ -71,7 +70,6 @@ function Favourites(props) {
                             </div>
                           </div>
         
-                          {/* Рабочая кнопка-крестик для удаления товара */}
                           <button
                             type="button"
                             onClick={function() {
