@@ -2,7 +2,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 function ProductCard({ title, price, image, isAdded, isFavorite, onAdd, onFavorite, isDarkMode }) {
   return (
-    <div className={`relative w-full flex flex-col justify-between border rounded-[32px] p-[26px] transition-all duration-300 hover:-translate-y-1 ${
+    <div className={`relative w-fit mx-auto flex flex-col justify-between border rounded-[32px] p-[26px] transition-all duration-300 hover:-translate-y-1 ${
       isDarkMode
         ? "bg-white border-[#E5E7EB] text-[#1F2937] hover:shadow-[0_20px_40px_rgba(0,0,0,0.18)]"
         : "border-[#F3F3F3] bg-white text-black hover:shadow-[0_14px_30px_rgba(0,0,0,0.08)]"
